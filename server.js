@@ -3,6 +3,7 @@ const path = require('path');
 const express = require('express');
 const fs = require('fs')
 
+const port = process.env.PORT || 3001;
 const app = express();
 const db = './db/db.json'
 
@@ -94,6 +95,6 @@ app.delete('/api/notes/:id', (req, res) => {
 })
 
 
-app.listen(PORT, () => {
-    console.log(`Listening on Port: ${PORT}`)
+app.listen(port, () => {
+    console.log(`Listening on Port: ${port}`)
 })
